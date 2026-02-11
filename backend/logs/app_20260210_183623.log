@@ -1,0 +1,47 @@
+2026-02-10 18:36:23,390 - main - INFO - === Logging system initialized ===
+2026-02-10 18:36:23,391 - main - INFO - Log file: logs/app_20260210_183623.log
+2026-02-10 18:36:23,391 - main - INFO - Log level: INFO
+2026-02-10 18:36:23,391 - main - INFO - Timestamp: 20260210_183623
+2026-02-10 18:36:24,321 - main - INFO - Included router: routers.ai_learning.router
+2026-02-10 18:36:24,331 - main - INFO - Included router: routers.aihub.router
+2026-02-10 18:36:24,349 - main - INFO - Included router: routers.auth_local.router
+2026-02-10 18:36:24,464 - main - INFO - Included router: routers.carbon_metrics.router
+2026-02-10 18:36:24,466 - main - INFO - Included router: routers.config.router
+2026-02-10 18:36:24,468 - main - INFO - Included router: routers.health.router
+2026-02-10 18:36:24,513 - main - INFO - Included router: routers.learning_paths.router
+2026-02-10 18:36:24,532 - main - INFO - Included router: routers.settings.router
+2026-02-10 18:36:24,566 - main - INFO - Included router: routers.storage.router
+2026-02-10 18:36:24,612 - main - INFO - Included router: routers.tree_plantations.router
+2026-02-10 18:36:24,620 - main - INFO - Included router: routers.user.router
+2026-02-10 18:36:24,667 - main - INFO - Included router: routers.user_stats.router
+2026-02-10 18:36:24,668 - main - INFO - === Application startup initiated ===
+2026-02-10 18:36:24,668 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-10 18:36:24,669 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-10 18:36:24,669 - core.database - INFO - Starting database initialization...
+2026-02-10 18:36:24,669 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-02-10 18:36:24,669 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-02-10 18:36:24,670 - core.database - INFO - Creating async database engine...
+2026-02-10 18:36:24,671 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-02-10 18:36:24,718 - core.database - INFO - Database engine created successfully
+2026-02-10 18:36:24,718 - core.database - INFO - Creating async session maker...
+2026-02-10 18:36:24,719 - core.database - INFO - Async session maker created successfully
+2026-02-10 18:36:24,719 - core.database - INFO - Database connection initialized successfully
+2026-02-10 18:36:24,719 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-10 18:36:24,719 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-10 18:36:24,719 - core.database - INFO - 🔧 Starting table creation...
+2026-02-10 18:36:26,509 - core.database - INFO - Tables initialized successfully
+2026-02-10 18:36:26,510 - core.database - DEBUG - [DB_OP] Create tables completed in 1.7906s
+2026-02-10 18:36:26,570 - services.database - INFO - 🔧 Table creation completed
+2026-02-10 18:36:26,570 - services.database - INFO - Database initialized successfully
+2026-02-10 18:36:26,570 - services.database - DEBUG - [DB_OP] Database initialization completed in 1.9016s
+2026-02-10 18:36:26,570 - services.mock_data - INFO - mock_data directory not found, skipping mock initialization
+2026-02-10 18:36:26,571 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-10 18:36:26,571 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-10 18:36:26,571 - core.database - INFO - Starting database initialization...
+2026-02-10 18:36:26,571 - core.database - INFO - Database already initialized
+2026-02-10 18:36:26,571 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-10 18:36:26,571 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-10 18:36:26,571 - core.database - INFO - Tables already initialized
+2026-02-10 18:36:26,571 - services.database - INFO - 🔧 Table creation completed
+2026-02-10 18:36:26,571 - services.database - INFO - Database initialized successfully
+2026-02-10 18:36:26,571 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.0007s

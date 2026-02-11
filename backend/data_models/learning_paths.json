@@ -1,0 +1,63 @@
+{
+    "title": "learning_paths",
+    "type": "object",
+    "description": "Parcours d'apprentissage générés par l'IA",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "title": {
+            "type": "string",
+            "description": "Titre du parcours"
+        },
+        "description": {
+            "type": "string",
+            "description": "Description du parcours"
+        },
+        "topic": {
+            "type": "string",
+            "description": "Sujet principal"
+        },
+        "difficulty": {
+            "type": "string",
+            "description": "Niveau de difficulté: beginner, intermediate, advanced"
+        },
+        "content": {
+            "type": "string",
+            "description": "Contenu pédagogique généré par l'IA (JSON)"
+        },
+        "progress": {
+            "type": "integer",
+            "description": "Progression en pourcentage (0-100)"
+        },
+        "total_sessions": {
+            "type": "integer",
+            "description": "Nombre total de sessions"
+        },
+        "completed_sessions": {
+            "type": "integer",
+            "description": "Nombre de sessions complétées"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date de création"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date de mise à jour"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "title",
+        "topic"
+    ]
+}

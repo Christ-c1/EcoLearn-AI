@@ -1,0 +1,51 @@
+{
+    "title": "tree_plantations",
+    "type": "object",
+    "description": "Historique des plantations d'arbres",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "trees_planted": {
+            "type": "integer",
+            "description": "Nombre d'arbres plantés"
+        },
+        "carbon_offset": {
+            "type": "number",
+            "description": "CO2 compensé en kg"
+        },
+        "location": {
+            "type": "string",
+            "description": "Lieu de plantation"
+        },
+        "tree_species": {
+            "type": "string",
+            "description": "Espèce d'arbre"
+        },
+        "plantation_date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date de plantation"
+        },
+        "certificate_id": {
+            "type": "string",
+            "description": "ID du certificat de plantation"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date de création"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "trees_planted",
+        "carbon_offset"
+    ]
+}

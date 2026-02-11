@@ -1,0 +1,55 @@
+{
+    "title": "carbon_metrics",
+    "type": "object",
+    "description": "Métriques d'empreinte carbone par session",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "learning_path_id": {
+            "type": "integer",
+            "description": "ID du parcours associé"
+        },
+        "session_duration": {
+            "type": "integer",
+            "description": "Durée de la session en minutes"
+        },
+        "carbon_footprint": {
+            "type": "number",
+            "description": "Empreinte carbone en grammes de CO2"
+        },
+        "device_type": {
+            "type": "string",
+            "description": "Type d'appareil: desktop, laptop, tablet, mobile"
+        },
+        "energy_consumed": {
+            "type": "number",
+            "description": "Énergie consommée en Wh"
+        },
+        "trees_contribution": {
+            "type": "number",
+            "description": "Contribution en arbres (fraction)"
+        },
+        "session_date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date de la session"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date de création"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "session_duration",
+        "carbon_footprint"
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "title": "user_stats",
+    "type": "object",
+    "description": "Statistiques globales de l'utilisateur",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "total_learning_time": {
+            "type": "integer",
+            "description": "Temps total d'apprentissage en minutes"
+        },
+        "total_carbon_footprint": {
+            "type": "number",
+            "description": "Empreinte carbone totale en kg"
+        },
+        "total_trees_planted": {
+            "type": "integer",
+            "description": "Nombre total d'arbres plantés"
+        },
+        "total_carbon_offset": {
+            "type": "number",
+            "description": "CO2 total compensé en kg"
+        },
+        "paths_completed": {
+            "type": "integer",
+            "description": "Nombre de parcours complétés"
+        },
+        "current_streak": {
+            "type": "integer",
+            "description": "Série de jours consécutifs"
+        },
+        "longest_streak": {
+            "type": "integer",
+            "description": "Plus longue série"
+        },
+        "level": {
+            "type": "integer",
+            "description": "Niveau de l'utilisateur"
+        },
+        "experience_points": {
+            "type": "integer",
+            "description": "Points d'expérience"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date de mise à jour"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

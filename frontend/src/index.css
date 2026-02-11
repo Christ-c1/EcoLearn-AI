@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 152 81% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 152 81% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 152 81% 10%;
+    --primary: 152 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 152 30% 90%;
+    --secondary-foreground: 152 81% 10%;
+    --muted: 152 30% 96%;
+    --muted-foreground: 152 20% 40%;
+    --accent: 152 30% 90%;
+    --accent-foreground: 152 81% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 152 30% 85%;
+    --input: 152 30% 85%;
+    --ring: 152 76% 36%;
+    --radius: 0.75rem;
+    --chart-1: 152 76% 36%;
+    --chart-2: 152 60% 50%;
+    --chart-3: 152 50% 60%;
+    --chart-4: 152 40% 70%;
+    --chart-5: 152 30% 80%;
+  }
+
+  .dark {
+    --background: 152 50% 5%;
+    --foreground: 0 0% 98%;
+    --card: 152 50% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 152 50% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 152 76% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 152 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 152 30% 15%;
+    --muted-foreground: 152 20% 60%;
+    --accent: 152 30% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 152 30% 20%;
+    --input: 152 30% 20%;
+    --ring: 152 76% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(152 30% 96%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(152 30% 70%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(152 50% 50%);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(152 30% 70%) hsl(152 30% 96%);
+}

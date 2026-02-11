@@ -1,0 +1,46 @@
+2026-02-10 17:19:08,312 - main - INFO - === Logging system initialized ===
+2026-02-10 17:19:08,312 - main - INFO - Log file: logs/app_20260210_171908.log
+2026-02-10 17:19:08,312 - main - INFO - Log level: INFO
+2026-02-10 17:19:08,312 - main - INFO - Timestamp: 20260210_171908
+2026-02-10 17:19:09,079 - main - INFO - Included router: routers.ai_learning.router
+2026-02-10 17:19:09,088 - main - INFO - Included router: routers.aihub.router
+2026-02-10 17:19:09,112 - main - INFO - Included router: routers.auth_local.router
+2026-02-10 17:19:09,230 - main - INFO - Included router: routers.carbon_metrics.router
+2026-02-10 17:19:09,232 - main - INFO - Included router: routers.health.router
+2026-02-10 17:19:09,287 - main - INFO - Included router: routers.learning_paths.router
+2026-02-10 17:19:09,309 - main - INFO - Included router: routers.settings.router
+2026-02-10 17:19:09,343 - main - INFO - Included router: routers.storage.router
+2026-02-10 17:19:09,390 - main - INFO - Included router: routers.tree_plantations.router
+2026-02-10 17:19:09,415 - main - INFO - Included router: routers.user.router
+2026-02-10 17:19:09,463 - main - INFO - Included router: routers.user_stats.router
+2026-02-10 17:19:09,464 - main - INFO - === Application startup initiated ===
+2026-02-10 17:19:09,465 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-10 17:19:09,465 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-10 17:19:09,465 - core.database - INFO - Starting database initialization...
+2026-02-10 17:19:09,465 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-02-10 17:19:09,465 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-02-10 17:19:09,466 - core.database - INFO - Creating async database engine...
+2026-02-10 17:19:09,466 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-02-10 17:19:09,506 - core.database - INFO - Database engine created successfully
+2026-02-10 17:19:09,506 - core.database - INFO - Creating async session maker...
+2026-02-10 17:19:09,506 - core.database - INFO - Async session maker created successfully
+2026-02-10 17:19:09,506 - core.database - INFO - Database connection initialized successfully
+2026-02-10 17:19:09,506 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-10 17:19:09,506 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-10 17:19:09,506 - core.database - INFO - 🔧 Starting table creation...
+2026-02-10 17:19:10,901 - core.database - INFO - Tables initialized successfully
+2026-02-10 17:19:10,902 - core.database - DEBUG - [DB_OP] Create tables completed in 1.3956s
+2026-02-10 17:19:10,960 - services.database - INFO - 🔧 Table creation completed
+2026-02-10 17:19:10,961 - services.database - INFO - Database initialized successfully
+2026-02-10 17:19:10,961 - services.database - DEBUG - [DB_OP] Database initialization completed in 1.4966s
+2026-02-10 17:19:10,962 - services.mock_data - INFO - mock_data directory not found, skipping mock initialization
+2026-02-10 17:19:10,962 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-10 17:19:10,963 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-10 17:19:10,963 - core.database - INFO - Starting database initialization...
+2026-02-10 17:19:10,963 - core.database - INFO - Database already initialized
+2026-02-10 17:19:10,963 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-10 17:19:10,963 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-10 17:19:10,963 - core.database - INFO - Tables already initialized
+2026-02-10 17:19:10,963 - services.database - INFO - 🔧 Table creation completed
+2026-02-10 17:19:10,963 - services.database - INFO - Database initialized successfully
+2026-02-10 17:19:10,963 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.0011s

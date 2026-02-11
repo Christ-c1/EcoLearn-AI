@@ -1,0 +1,126 @@
+2026-02-11 10:38:55,633 - main - INFO - === Logging system initialized ===
+2026-02-11 10:38:55,634 - main - INFO - Log file: logs/app_20260211_103855.log
+2026-02-11 10:38:55,634 - main - INFO - Log level: INFO
+2026-02-11 10:38:55,635 - main - INFO - Timestamp: 20260211_103855
+2026-02-11 10:38:56,845 - main - INFO - Included router: routers.ai_learning.router
+2026-02-11 10:38:57,403 - main - WARNING - Failed to import module 'routers.aihub': No module named 'sse_starlette'
+2026-02-11 10:38:57,537 - main - INFO - Included router: routers.auth_local.router
+2026-02-11 10:38:57,625 - main - INFO - Included router: routers.carbon_metrics.router
+2026-02-11 10:38:57,713 - main - INFO - Included router: routers.config.router
+2026-02-11 10:38:57,788 - main - INFO - Included router: routers.health.router
+2026-02-11 10:38:57,896 - main - INFO - Included router: routers.learning_paths.router
+2026-02-11 10:38:57,986 - main - INFO - Included router: routers.settings.router
+2026-02-11 10:38:58,234 - main - INFO - Included router: routers.storage.router
+2026-02-11 10:38:58,508 - main - INFO - Included router: routers.tree_plantations.router
+2026-02-11 10:38:58,636 - main - INFO - Included router: routers.user.router
+2026-02-11 10:38:58,771 - main - INFO - Included router: routers.user_stats.router
+2026-02-11 10:38:58,773 - main - INFO - === Application startup initiated ===
+2026-02-11 10:38:58,774 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-11 10:38:58,774 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-11 10:38:58,775 - core.database - INFO - Starting database initialization...
+2026-02-11 10:38:58,776 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-02-11 10:38:58,776 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-02-11 10:38:58,777 - core.database - INFO - Creating async database engine...
+2026-02-11 10:38:58,778 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-02-11 10:38:58,824 - core.database - INFO - Database engine created successfully
+2026-02-11 10:38:58,825 - core.database - INFO - Creating async session maker...
+2026-02-11 10:38:58,825 - core.database - INFO - Async session maker created successfully
+2026-02-11 10:38:58,825 - core.database - INFO - Database connection initialized successfully
+2026-02-11 10:38:58,834 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-11 10:38:58,836 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-11 10:38:58,838 - core.database - INFO - 🔧 Starting table creation...
+2026-02-11 10:38:58,904 - core.database - INFO - Tables initialized successfully
+2026-02-11 10:38:58,905 - core.database - DEBUG - [DB_OP] Create tables completed in 0.0683s
+2026-02-11 10:38:58,906 - services.database - INFO - 🔧 Table creation completed
+2026-02-11 10:38:58,906 - services.database - INFO - Database initialized successfully
+2026-02-11 10:38:58,907 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.1328s
+2026-02-11 10:38:58,907 - services.mock_data - INFO - mock_data directory not found, skipping mock initialization
+2026-02-11 10:38:58,908 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-11 10:38:58,909 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-11 10:38:58,910 - core.database - INFO - Starting database initialization...
+2026-02-11 10:38:58,911 - core.database - INFO - Database already initialized
+2026-02-11 10:38:58,912 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-11 10:38:58,912 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-11 10:38:58,913 - core.database - INFO - Tables already initialized
+2026-02-11 10:38:58,913 - services.database - INFO - 🔧 Table creation completed
+2026-02-11 10:38:58,914 - services.database - INFO - Database initialized successfully
+2026-02-11 10:38:58,914 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.0064s
+2026-02-11 10:38:59,185 - services.auth - INFO - Created admin user: admin@ecolearn.com
+2026-02-11 10:38:59,185 - main - INFO - === Application startup completed successfully ===
+2026-02-11 10:44:04,383 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-11 10:44:04,384 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0011s
+2026-02-11 10:44:04,399 - core.database - ERROR - Database session error: 401: Email ou mot de passe incorrect
+Traceback (most recent call last):
+  File "/app/routers/auth_local.py", line 91, in login
+    user, token = await auth_service.login(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/services/auth_local.py", line 118, in login
+    raise ValueError("Email ou mot de passe incorrect")
+ValueError: Email ou mot de passe incorrect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/core/database.py", line 534, in get_db
+    yield session
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 426, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 314, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routers/auth_local.py", line 109, in login
+    raise HTTPException(status_code=401, detail=str(e))
+fastapi.exceptions.HTTPException: 401: Email ou mot de passe incorrect
+2026-02-11 10:44:04,450 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0668s
+2026-02-11 10:44:04,451 - core.database - ERROR - Failed to create database session: 401: Email ou mot de passe incorrect
+Traceback (most recent call last):
+  File "/app/routers/auth_local.py", line 91, in login
+    user, token = await auth_service.login(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/services/auth_local.py", line 118, in login
+    raise ValueError("Email ou mot de passe incorrect")
+ValueError: Email ou mot de passe incorrect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/core/database.py", line 534, in get_db
+    yield session
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 107, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 426, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 314, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routers/auth_local.py", line 109, in login
+    raise HTTPException(status_code=401, detail=str(e))
+fastapi.exceptions.HTTPException: 401: Email ou mot de passe incorrect
+2026-02-11 10:44:45,259 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-11 10:44:45,260 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-02-11 10:44:45,550 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.2911s
+2026-02-11 10:44:45,681 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-11 10:44:45,686 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0042s
+2026-02-11 10:44:45,696 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0146s
+2026-02-11 10:44:45,755 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-11 10:44:45,773 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-11 10:44:45,774 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-11 10:44:45,775 - routers.learning_paths - DEBUG - Querying learning_pathss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-11 10:44:45,810 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-11 10:44:45,813 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-11 10:44:45,815 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0022s
+2026-02-11 10:44:45,818 - routers.user_stats - DEBUG - Querying user_statss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-11 10:44:45,874 - routers.learning_paths - DEBUG - Found 0 learning_pathss
+2026-02-11 10:44:45,875 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.1013s
+2026-02-11 10:44:45,888 - routers.user_stats - DEBUG - Found 0 user_statss
+2026-02-11 10:44:45,891 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0780s
+2026-02-11 11:15:35,378 - services.database - DEBUG - [DB_OP] Starting database close
+2026-02-11 11:15:35,442 - core.database - INFO - Database connection closed and engine disposed
+2026-02-11 11:15:35,443 - services.database - INFO - Database connections closed
+2026-02-11 11:15:35,444 - services.database - DEBUG - [DB_OP] Database close completed in 0.0668s

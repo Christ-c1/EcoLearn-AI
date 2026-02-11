@@ -1,0 +1,55 @@
+2026-02-10 16:23:58,933 - main - INFO - === Logging system initialized ===
+2026-02-10 16:23:58,933 - main - INFO - Log file: logs/app_20260210_162358.log
+2026-02-10 16:23:58,934 - main - INFO - Log level: INFO
+2026-02-10 16:23:58,934 - main - INFO - Timestamp: 20260210_162358
+2026-02-10 16:23:59,556 - main - INFO - Included router: routers.ai_learning.router
+2026-02-10 16:23:59,567 - main - INFO - Included router: routers.aihub.router
+2026-02-10 16:23:59,580 - main - INFO - Included router: routers.auth.router
+2026-02-10 16:23:59,597 - main - WARNING - Failed to import module 'routers.auth_local': Table 'users' is already defined for this MetaData instance.  Specify 'extend_existing=True' to redefine options and columns on an existing Table object.
+2026-02-10 16:23:59,751 - main - INFO - Included router: routers.carbon_metrics.router
+2026-02-10 16:23:59,753 - main - INFO - Included router: routers.health.router
+2026-02-10 16:23:59,801 - main - INFO - Included router: routers.learning_paths.router
+2026-02-10 16:23:59,821 - main - INFO - Included router: routers.settings.router
+2026-02-10 16:23:59,854 - main - INFO - Included router: routers.storage.router
+2026-02-10 16:23:59,899 - main - INFO - Included router: routers.tree_plantations.router
+2026-02-10 16:23:59,912 - main - INFO - Included router: routers.user.router
+2026-02-10 16:23:59,957 - main - INFO - Included router: routers.user_stats.router
+2026-02-10 16:23:59,958 - main - INFO - === Application startup initiated ===
+2026-02-10 16:23:59,959 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-10 16:23:59,959 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-10 16:23:59,959 - core.database - INFO - Starting database initialization...
+2026-02-10 16:23:59,959 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-02-10 16:23:59,959 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-02-10 16:23:59,960 - core.database - INFO - Creating async database engine...
+2026-02-10 16:23:59,960 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-02-10 16:23:59,994 - core.database - INFO - Database engine created successfully
+2026-02-10 16:23:59,995 - core.database - INFO - Creating async session maker...
+2026-02-10 16:23:59,995 - core.database - INFO - Async session maker created successfully
+2026-02-10 16:23:59,995 - core.database - INFO - Database connection initialized successfully
+2026-02-10 16:23:59,995 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-10 16:23:59,995 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-10 16:23:59,995 - core.database - INFO - 🔧 Starting table creation...
+2026-02-10 16:24:01,483 - core.database - INFO - Tables initialized successfully
+2026-02-10 16:24:01,484 - core.database - DEBUG - [DB_OP] Create tables completed in 1.4891s
+2026-02-10 16:24:01,544 - services.database - INFO - 🔧 Table creation completed
+2026-02-10 16:24:01,545 - services.database - INFO - Database initialized successfully
+2026-02-10 16:24:01,545 - services.database - DEBUG - [DB_OP] Database initialization completed in 1.5863s
+2026-02-10 16:24:01,546 - services.mock_data - INFO - mock_data directory not found, skipping mock initialization
+2026-02-10 16:24:01,546 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-10 16:24:01,546 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-10 16:24:01,546 - core.database - INFO - Starting database initialization...
+2026-02-10 16:24:01,546 - core.database - INFO - Database already initialized
+2026-02-10 16:24:01,546 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-10 16:24:01,546 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-10 16:24:01,546 - core.database - INFO - Tables already initialized
+2026-02-10 16:24:01,547 - services.database - INFO - 🔧 Table creation completed
+2026-02-10 16:24:01,547 - services.database - INFO - Database initialized successfully
+2026-02-10 16:24:01,547 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.0013s
+2026-02-10 16:24:01,547 - core.config - DEBUG - Read dynamic attribute admin_user_id from environment variable ADMIN_USER_ID
+2026-02-10 16:24:01,547 - core.config - DEBUG - Read dynamic attribute admin_user_email from environment variable ADMIN_USER_EMAIL
+2026-02-10 16:24:01,969 - services.auth - DEBUG - Admin user 964059 already exists
+2026-02-10 16:24:02,029 - main - INFO - === Application startup completed successfully ===
+2026-02-10 16:37:46,662 - services.database - DEBUG - [DB_OP] Starting database close
+2026-02-10 16:37:46,663 - core.database - INFO - Database connection closed and engine disposed
+2026-02-10 16:37:46,663 - services.database - INFO - Database connections closed
+2026-02-10 16:37:46,663 - services.database - DEBUG - [DB_OP] Database close completed in 0.0012s

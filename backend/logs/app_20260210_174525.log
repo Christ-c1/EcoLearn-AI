@@ -1,0 +1,16 @@
+2026-02-10 17:45:25,495 - main - INFO - === Logging system initialized ===
+2026-02-10 17:45:25,495 - main - INFO - Log file: logs/app_20260210_174525.log
+2026-02-10 17:45:25,495 - main - INFO - Log level: INFO
+2026-02-10 17:45:25,495 - main - INFO - Timestamp: 20260210_174525
+2026-02-10 17:45:26,117 - main - INFO - Included router: routers.ai_learning.router
+2026-02-10 17:45:26,153 - main - INFO - Included router: routers.aihub.router
+2026-02-10 17:45:26,184 - main - INFO - Included router: routers.auth_local.router
+2026-02-10 17:45:26,229 - main - INFO - Included router: routers.carbon_metrics.router
+2026-02-10 17:45:26,231 - main - INFO - Included router: routers.config.router
+2026-02-10 17:45:26,232 - main - INFO - Included router: routers.health.router
+2026-02-10 17:45:26,347 - main - INFO - Included router: routers.learning_paths.router
+2026-02-10 17:45:26,366 - main - INFO - Included router: routers.settings.router
+2026-02-10 17:45:26,399 - main - INFO - Included router: routers.storage.router
+2026-02-10 17:45:26,448 - main - INFO - Included router: routers.tree_plantations.router
+2026-02-10 17:45:26,455 - main - INFO - Included router: routers.user.router
+2026-02-10 17:45:26,498 - main - INFO - Included router: routers.user_stats.router

@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: ecolearn-postgres
+    environment:
+      POSTGRES_USER: ecolearn
+      POSTGRES_PASSWORD: ecolearn_secret_2024
+      POSTGRES_DB: ecolearn_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - ecolearn-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ecolearn -d ecolearn_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ecolearn-backend
+    environment:
+      DATABASE_URL: postgresql+asyncpg://ecolearn:ecolearn_secret_2024@postgres:5432/ecolearn_db
+      PYTHONUNBUFFERED: 1
+      SECRET_KEY: ecolearn-secret-key-change-in-production-2024
+      JWT_SECRET_KEY: ecolearn-secret-key-change-in-production-2024
+      JWT_ALGORITHM: HS256
+      JWT_EXPIRE_MINUTES: 1440
+      FRONTEND_URL: http://localhost:3000
+      # OpenRouter AI Configuration
+      APP_AI_BASE_URL: https://openrouter.ai/api/v1
+      APP_AI_KEY: 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
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - ecolearn-network
+    volumes:
+      - ./backend:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  # React Frontend with Nginx (proxies API requests to backend)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ecolearn-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - ecolearn-network
+
+networks:
+  ecolearn-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
