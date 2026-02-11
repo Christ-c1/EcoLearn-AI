@@ -12,8 +12,14 @@ on:
 env:
   BACKEND_DIR: backend
   FRONTEND_DIR: frontend
+  DOCKER_BACKEND_IMAGE: christine570/ecolearn-backend
+  DOCKER_FRONTEND_IMAGE: christine570/ecolearn-frontend
+  DOCKER_TAG: christ
 
 jobs:
+  # ----------------------
+  # Job 1: Backend CI
+  # ----------------------
   backend-test:
     name: Backend - Build & Test
     runs-on: ubuntu-latest
@@ -37,6 +43,9 @@ jobs:
         working-directory: ${{ env.BACKEND_DIR }}
         run: python -m pytest -v
 
+  # ----------------------
+  # Job 2: Frontend CI
+  # ----------------------
   frontend-build:
     name: Frontend - Build
     runs-on: ubuntu-latest
@@ -59,3 +68,43 @@ jobs:
       - name: Build frontend
         working-directory: ${{ env.FRONTEND_DIR }}
         run: pnpm run build
+
+  # ----------------------
+  # Job 3: CD - Push Docker Images
+  # ----------------------
+  docker-deploy:
+    name: Build & Push Docker Images
+    runs-on: ubuntu-latest
+    needs: [backend-test, frontend-build]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Docker login
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # Build backend image
+      - name: Build backend Docker image
+        working-directory: ${{ env.BACKEND_DIR }}
+        run: |
+          docker build -t ${{ env.DOCKER_BACKEND_IMAGE }}:${{ env.DOCKER_TAG }} .
+
+      # Push backend image
+      - name: Push backend Docker image
+        run: |
+          docker push ${{ env.DOCKER_BACKEND_IMAGE }}:${{ env.DOCKER_TAG }}
+
+      # Build frontend image
+      - name: Build frontend Docker image
+        working-directory: ${{ env.FRONTEND_DIR }}
+        run: |
+          docker build -t ${{ env.DOCKER_FRONTEND_IMAGE }}:${{ env.DOCKER_TAG }} .
+
+      # Push frontend image
+      - name: Push frontend Docker image
+        run: |
+          docker push ${{ env.DOCKER_FRONTEND_IMAGE }}:${{ env.DOCKER_TAG }}
