@@ -47,3 +47,177 @@
 2026-02-12 13:27:42,749 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.0049s
 2026-02-12 13:27:43,023 - services.auth - INFO - Created admin user: admin@ecolearn.com
 2026-02-12 13:27:43,024 - main - INFO - === Application startup completed successfully ===
+2026-02-12 13:29:14,587 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:29:14,588 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0011s
+2026-02-12 13:29:14,892 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3049s
+2026-02-12 13:29:14,931 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:29:14,931 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-12 13:29:14,936 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0059s
+2026-02-12 13:29:14,995 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:29:14,996 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:29:14,997 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-12 13:29:14,998 - routers.learning_paths - DEBUG - Querying learning_pathss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-12 13:29:15,022 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:29:15,022 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:29:15,023 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-12 13:29:15,023 - routers.user_stats - DEBUG - Querying user_statss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-12 13:29:15,086 - routers.learning_paths - DEBUG - Found 0 learning_pathss
+2026-02-12 13:29:15,087 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0913s
+2026-02-12 13:29:15,100 - routers.user_stats - DEBUG - Found 0 user_statss
+2026-02-12 13:29:15,100 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0781s
+2026-02-12 13:29:41,553 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:29:41,553 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:29:41,554 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0007s
+2026-02-12 13:29:41,555 - services.ai_learning - INFO - AI Learning Service initialized. AI available: True
+2026-02-12 13:29:41,556 - core.config - DEBUG - Read dynamic attribute app_ai_base_url from environment variable APP_AI_BASE_URL
+2026-02-12 13:29:41,556 - core.config - DEBUG - Read dynamic attribute app_ai_key from environment variable APP_AI_KEY
+2026-02-12 13:29:42,167 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-f09a797a-f98d-4b98-b540-1a5025d0a5a5', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'Tu es un expert en pédagogie environnementale. Tu crées des parcours d\'apprentissage structurés et engageants sur des sujets écologiques.\n        \nRéponds UNIQUEMENT en JSON valide avec cette structure exacte:\n{\n    "title": "Titre du parcours",\n    "description": "Description courte du parcours",\n    "modules": [\n        {\n            "id": 1,\n            "title": "Titre du module",\n            "duration_minutes": 15,\n            "content": {\n                "introduction": "Introduction au module",\n                "key_concepts": ["concept1", "concept2", "concept3"],\n                "detailed_content": "Contenu détaillé du module",\n                "practical_tips": ["conseil1", "conseil2"],\n                "quiz": [\n                    {\n                        "question": "Question?",\n                        "options": ["A", "B", "C", "D"],\n                        "correct_answer": 0\n                    }\n                ]\n            }\n        }\n    ],\n    "total_duration_minutes": 60,\n    "learning_objectives": ["objectif1", "objectif2", "objectif3"]\n}'}, {'role': 'user', 'content': 'Crée un parcours d\'apprentissage complet sur le sujet: "Recyclage"\n        \nNiveau de difficulté: débutant - concepts de base, explications simples\nLangue: fr\n\nLe parcours doit contenir 3-4 modules progressifs avec du contenu éducatif de qualité sur ce sujet écologique.\n\nIMPORTANT: Réponds UNIQUEMENT avec le JSON, sans aucun texte avant ou après.'}], 'model': 'google/gemini-flash-1.5', 'max_tokens': 4096, 'stream': False, 'temperature': 0.7}}
+2026-02-12 13:29:42,168 - openai._base_client - DEBUG - Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2026-02-12 13:29:42,176 - httpcore.connection - DEBUG - connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+2026-02-12 13:29:42,212 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f1779bf49d0>
+2026-02-12 13:29:42,214 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f177a520ef0> server_hostname='openrouter.ai' timeout=5.0
+2026-02-12 13:29:42,258 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f1779c21d90>
+2026-02-12 13:29:42,260 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-12 13:29:42,261 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-02-12 13:29:42,261 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-12 13:29:42,262 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-02-12 13:29:42,263 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-12 13:29:42,484 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 401, b'Unauthorized', [(b'Date', b'Thu, 12 Feb 2026 13:29:43 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9ccc6fbd29e39ece-CDG')])
+2026-02-12 13:29:42,487 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-02-12 13:29:42,488 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-12 13:29:42,489 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-02-12 13:29:42,490 - httpcore.http11 - DEBUG - response_closed.started
+2026-02-12 13:29:42,491 - httpcore.http11 - DEBUG - response_closed.complete
+2026-02-12 13:29:42,492 - openai._base_client - DEBUG - HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "401 Unauthorized" Headers({'date': 'Thu, 12 Feb 2026 13:29:43 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'permissions-policy': 'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")', 'referrer-policy': 'no-referrer, strict-origin-when-cross-origin', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '9ccc6fbd29e39ece-CDG'})
+2026-02-12 13:29:42,493 - openai._base_client - DEBUG - request_id: None
+2026-02-12 13:29:42,493 - openai._base_client - DEBUG - Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1649, in request
+    response.raise_for_status()
+  File "/usr/local/lib/python3.11/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+2026-02-12 13:29:42,519 - openai._base_client - DEBUG - Not retrying
+2026-02-12 13:29:42,520 - openai._base_client - DEBUG - Re-raising status error
+2026-02-12 13:29:42,522 - services.aihub - ERROR - gentxt error: Error code: 401 - {'error': {'message': 'User not found.', 'code': 401}}
+2026-02-12 13:29:42,522 - services.ai_learning - WARNING - AI generation failed, using fallback: Error code: 401 - {'error': {'message': 'User not found.', 'code': 401}}
+2026-02-12 13:29:42,566 - services.learning_paths - INFO - Created learning_paths with id: 1
+2026-02-12 13:29:42,567 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.0135s
+2026-02-12 13:29:42,576 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:29:42,578 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:29:42,578 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0009s
+2026-02-12 13:29:42,580 - routers.learning_paths - DEBUG - Querying learning_pathss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-12 13:29:42,581 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:29:42,582 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:29:42,583 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-12 13:29:42,583 - routers.user_stats - DEBUG - Querying user_statss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-12 13:29:42,588 - routers.user_stats - DEBUG - Found 0 user_statss
+2026-02-12 13:29:42,590 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0076s
+2026-02-12 13:29:42,592 - routers.learning_paths - DEBUG - Found 1 learning_pathss
+2026-02-12 13:29:42,593 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0154s
+2026-02-12 13:29:45,311 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:29:45,314 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0025s
+2026-02-12 13:29:45,319 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0074s
+2026-02-12 13:29:45,332 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:29:45,333 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:29:45,333 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-12 13:29:45,333 - routers.learning_paths - DEBUG - Fetching learning_paths with id: 1, fields=None
+2026-02-12 13:29:45,338 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0050s
+2026-02-12 13:30:06,246 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:30:06,247 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:30:06,247 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-02-12 13:30:06,280 - services.carbon_metrics - INFO - Created carbon_metrics with id: 1
+2026-02-12 13:30:06,293 - services.user_stats - INFO - Created user_stats with id: 1
+2026-02-12 13:30:06,294 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0472s
+2026-02-12 13:30:06,312 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:30:06,312 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:30:06,313 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-12 13:30:06,314 - routers.learning_paths - DEBUG - Updating learning_paths 1 with data: title=None description=None topic=None difficulty=None content=None progress=33 total_sessions=None completed_sessions=1 created_at=None updated_at=None
+2026-02-12 13:30:06,323 - services.learning_paths - INFO - Updated learning_paths 1
+2026-02-12 13:30:06,324 - routers.learning_paths - INFO - Learning_paths 1 updated successfully
+2026-02-12 13:30:06,325 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0123s
+2026-02-12 13:30:06,341 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:30:06,343 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:30:06,345 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0022s
+2026-02-12 13:30:06,348 - routers.learning_paths - DEBUG - Fetching learning_paths with id: 1, fields=None
+2026-02-12 13:30:06,353 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0104s
+2026-02-12 13:30:59,845 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:30:59,847 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:30:59,848 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0013s
+2026-02-12 13:30:59,857 - services.carbon_metrics - INFO - Created carbon_metrics with id: 2
+2026-02-12 13:30:59,871 - services.user_stats - INFO - Updated user_stats 1
+2026-02-12 13:30:59,873 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0256s
+2026-02-12 13:30:59,879 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:30:59,879 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:30:59,880 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-12 13:30:59,881 - routers.learning_paths - DEBUG - Updating learning_paths 1 with data: title=None description=None topic=None difficulty=None content=None progress=67 total_sessions=None completed_sessions=2 created_at=None updated_at=None
+2026-02-12 13:30:59,889 - services.learning_paths - INFO - Updated learning_paths 1
+2026-02-12 13:30:59,889 - routers.learning_paths - INFO - Learning_paths 1 updated successfully
+2026-02-12 13:30:59,890 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0103s
+2026-02-12 13:30:59,898 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:30:59,899 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:30:59,899 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-12 13:30:59,900 - routers.learning_paths - DEBUG - Fetching learning_paths with id: 1, fields=None
+2026-02-12 13:30:59,903 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0041s
+2026-02-12 13:31:55,299 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:31:55,361 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:31:55,363 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0016s
+2026-02-12 13:31:55,396 - services.carbon_metrics - INFO - Created carbon_metrics with id: 3
+2026-02-12 13:31:55,409 - services.user_stats - INFO - Updated user_stats 1
+2026-02-12 13:31:55,410 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0487s
+2026-02-12 13:31:55,420 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:31:55,421 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:31:55,421 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-12 13:31:55,422 - routers.learning_paths - DEBUG - Updating learning_paths 1 with data: title=None description=None topic=None difficulty=None content=None progress=100 total_sessions=None completed_sessions=3 created_at=None updated_at=None
+2026-02-12 13:31:55,437 - services.learning_paths - INFO - Updated learning_paths 1
+2026-02-12 13:31:55,438 - routers.learning_paths - INFO - Learning_paths 1 updated successfully
+2026-02-12 13:31:55,439 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0176s
+2026-02-12 13:31:55,465 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:31:55,467 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:31:55,469 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0017s
+2026-02-12 13:31:55,471 - routers.learning_paths - DEBUG - Fetching learning_paths with id: 1, fields=None
+2026-02-12 13:31:55,473 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0061s
+2026-02-12 13:32:06,600 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:32:06,601 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0018s
+2026-02-12 13:32:06,606 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0063s
+2026-02-12 13:32:06,620 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:32:06,621 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:32:06,622 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0010s
+2026-02-12 13:32:06,625 - routers.learning_paths - DEBUG - Querying learning_pathss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-12 13:32:06,628 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:32:06,629 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:32:06,630 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-12 13:32:06,631 - routers.user_stats - DEBUG - Querying user_statss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-12 13:32:06,634 - routers.learning_paths - DEBUG - Found 1 learning_pathss
+2026-02-12 13:32:06,635 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0135s
+2026-02-12 13:32:06,636 - routers.user_stats - DEBUG - Found 1 user_statss
+2026-02-12 13:32:06,638 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0088s
+2026-02-12 13:32:17,329 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:32:17,330 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-12 13:32:17,332 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0031s
+2026-02-12 13:32:17,364 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:32:17,365 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:32:17,365 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-12 13:32:17,366 - routers.carbon_metrics - DEBUG - Querying carbon_metricss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-12 13:32:17,377 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:32:17,378 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:32:17,379 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-02-12 13:32:17,385 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0067s
+2026-02-12 13:32:17,387 - routers.carbon_metrics - DEBUG - Found 3 carbon_metricss
+2026-02-12 13:32:17,391 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0263s
+2026-02-12 13:32:19,934 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:32:19,935 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0012s
+2026-02-12 13:32:19,939 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0052s
+2026-02-12 13:32:19,955 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:32:19,957 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:32:19,958 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0010s
+2026-02-12 13:32:19,959 - routers.learning_paths - DEBUG - Querying learning_pathss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-12 13:32:19,961 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-12 13:32:19,962 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-12 13:32:19,963 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-12 13:32:19,963 - routers.user_stats - DEBUG - Querying user_statss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-12 13:32:19,968 - routers.user_stats - DEBUG - Found 1 user_statss
+2026-02-12 13:32:19,969 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0072s
+2026-02-12 13:32:19,974 - routers.learning_paths - DEBUG - Found 1 learning_pathss
+2026-02-12 13:32:19,975 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0182s
