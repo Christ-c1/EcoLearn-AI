@@ -144,11 +144,11 @@ export default function Login() {
         <header className="p-6">
           <div className="flex items-center gap-3">
             <img 
-              src="https://mgx-backend-cdn.metadl.com/generate/images/963879/2026-02-10/ab3f7b89-dd10-496d-99b4-0326d53b66eb.png" 
+              src="assets/logo.png" 
               alt="EcoLearn AI" 
-              className="h-12 w-12 rounded-xl object-cover shadow-lg"
+              className="h-12 w-60"
             />
-            <span className="text-2xl font-bold text-emerald-800">EcoLearn AI</span>
+            
           </div>
         </header>
 
@@ -212,9 +212,9 @@ export default function Login() {
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto mb-4">
                   <img 
-                    src="https://mgx-backend-cdn.metadl.com/generate/images/963879/2026-02-10/444e3594-2c80-46c1-94e6-839ba90d1bf5.png" 
+                    src="assets/logo.png" 
                     alt="EcoLearn" 
-                    className="h-20 w-20 rounded-2xl object-cover shadow-lg mx-auto"
+                    className="h-50 w-50 rounded-2xl object-cover mx-auto"
                   />
                 </div>
                 <CardTitle className="text-2xl text-emerald-900">Bienvenue sur EcoLearn AI</CardTitle>

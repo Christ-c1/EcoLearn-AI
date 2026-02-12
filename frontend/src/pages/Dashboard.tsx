@@ -123,11 +123,10 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src="https://mgx-backend-cdn.metadl.com/generate/images/963879/2026-02-10/0455bb53-f1f1-4c3d-ab17-2bdfc205de32.png" 
+              src="assets/logo.png" 
               alt="EcoLearn AI" 
-              className="h-10 w-10 rounded-xl object-cover shadow-md"
+              className="h-12 w-60"
             />
-            <span className="text-2xl font-bold text-emerald-800">EcoLearn AI</span>
           </div>
           
           <nav className="flex items-center gap-3">
