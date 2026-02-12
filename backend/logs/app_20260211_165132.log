@@ -1,0 +1,68 @@
+2026-02-11 16:51:32,726 - main - INFO - === Logging system initialized ===
+2026-02-11 16:51:32,727 - main - INFO - Log file: logs/app_20260211_165132.log
+2026-02-11 16:51:32,728 - main - INFO - Log level: INFO
+2026-02-11 16:51:32,729 - main - INFO - Timestamp: 20260211_165132
+2026-02-11 16:51:33,628 - main - INFO - Included router: routers.ai_learning.router
+2026-02-11 16:51:34,975 - main - WARNING - Failed to import module 'routers.aihub': No module named 'sse_starlette'
+2026-02-11 16:51:35,091 - main - INFO - Included router: routers.auth_local.router
+2026-02-11 16:51:35,225 - main - INFO - Included router: routers.carbon_metrics.router
+2026-02-11 16:51:35,245 - main - INFO - Included router: routers.config.router
+2026-02-11 16:51:35,278 - main - INFO - Included router: routers.health.router
+2026-02-11 16:51:35,420 - main - INFO - Included router: routers.learning_paths.router
+2026-02-11 16:51:35,478 - main - INFO - Included router: routers.settings.router
+2026-02-11 16:51:35,583 - main - INFO - Included router: routers.storage.router
+2026-02-11 16:51:35,712 - main - INFO - Included router: routers.tree_plantations.router
+2026-02-11 16:51:35,752 - main - INFO - Included router: routers.user.router
+2026-02-11 16:51:35,841 - main - INFO - Included router: routers.user_stats.router
+2026-02-11 16:51:35,845 - main - INFO - === Application startup initiated ===
+2026-02-11 16:51:35,846 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-11 16:51:35,847 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-11 16:51:35,848 - core.database - INFO - Starting database initialization...
+2026-02-11 16:51:35,849 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-02-11 16:51:35,851 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-02-11 16:51:35,852 - core.database - INFO - Creating async database engine...
+2026-02-11 16:51:35,853 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-02-11 16:51:35,958 - core.database - INFO - Database engine created successfully
+2026-02-11 16:51:35,959 - core.database - INFO - Creating async session maker...
+2026-02-11 16:51:35,959 - core.database - INFO - Async session maker created successfully
+2026-02-11 16:51:35,960 - core.database - INFO - Database connection initialized successfully
+2026-02-11 16:51:35,961 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-11 16:51:35,962 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-11 16:51:35,962 - core.database - INFO - 🔧 Starting table creation...
+2026-02-11 16:51:36,202 - core.database - INFO - Tables initialized successfully
+2026-02-11 16:51:36,202 - core.database - DEBUG - [DB_OP] Create tables completed in 0.2405s
+2026-02-11 16:51:36,204 - services.database - INFO - 🔧 Table creation completed
+2026-02-11 16:51:36,205 - services.database - INFO - Database initialized successfully
+2026-02-11 16:51:36,205 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.3592s
+2026-02-11 16:51:36,207 - services.mock_data - INFO - mock_data directory not found, skipping mock initialization
+2026-02-11 16:51:36,208 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-11 16:51:36,208 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-11 16:51:36,209 - core.database - INFO - Starting database initialization...
+2026-02-11 16:51:36,210 - core.database - INFO - Database already initialized
+2026-02-11 16:51:36,211 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-11 16:51:36,212 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-11 16:51:36,213 - core.database - INFO - Tables already initialized
+2026-02-11 16:51:36,214 - services.database - INFO - 🔧 Table creation completed
+2026-02-11 16:51:36,215 - services.database - INFO - Database initialized successfully
+2026-02-11 16:51:36,216 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.0080s
+2026-02-11 16:51:36,249 - services.auth - DEBUG - Admin user admin@ecolearn.com already exists
+2026-02-11 16:51:36,251 - main - INFO - === Application startup completed successfully ===
+2026-02-11 16:52:15,282 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-11 16:52:15,283 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0013s
+2026-02-11 16:52:15,338 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0559s
+2026-02-11 16:52:15,368 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-11 16:52:15,372 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-11 16:52:15,373 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0018s
+2026-02-11 16:52:15,377 - routers.learning_paths - DEBUG - Querying learning_pathss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-11 16:52:15,401 - core.auth - DEBUG - Authentication token validated for user hash: d4735e3a
+2026-02-11 16:52:15,403 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-11 16:52:15,404 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0011s
+2026-02-11 16:52:15,407 - routers.user_stats - DEBUG - Querying user_statss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-02-11 16:52:15,459 - routers.learning_paths - DEBUG - Found 0 learning_pathss
+2026-02-11 16:52:15,461 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0892s
+2026-02-11 16:52:15,472 - routers.user_stats - DEBUG - Found 0 user_statss
+2026-02-11 16:52:15,473 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0701s
+2026-02-11 16:52:25,886 - services.database - DEBUG - [DB_OP] Starting database close
+2026-02-11 16:52:25,894 - core.database - INFO - Database connection closed and engine disposed
+2026-02-11 16:52:25,894 - services.database - INFO - Database connections closed
+2026-02-11 16:52:25,895 - services.database - DEBUG - [DB_OP] Database close completed in 0.0085s
